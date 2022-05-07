@@ -5,18 +5,14 @@ using System.Collections.Generic;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace DataAccessLayer.DataObject
+namespace API.BE.Models
 {
-    public partial class Production
+    public  class Production
     {
-        public Production()
-        {
-            Movie = new HashSet<Movie>();
-        }
+      
 
         public long IdProduction { get; set; }
         public string ProductionName { get; set; }
 
-        public virtual ICollection<Movie> Movie { get; set; }
     }
 }

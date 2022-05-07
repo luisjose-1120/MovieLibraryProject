@@ -1,4 +1,5 @@
 ﻿using System;
+using DataAccessLayer.DataObject;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -6,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 // If you have enabled NRTs for your project, then un-comment the following line:
 // #nullable disable
 
-namespace Wizard.Models
+namespace DataAccessLayer.EntityFramework
 {
     public partial class BibliotecaPeliculasContext : DbContext
     {
