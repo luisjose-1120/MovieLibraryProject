@@ -29,7 +29,7 @@ namespace DataAccessLayer.Repository
             dbContext.SaveChanges();
         }
 
-        public void Delente(T t)
+        public void Delete(T t)
         {
             try
             {

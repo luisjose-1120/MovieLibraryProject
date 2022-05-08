@@ -15,7 +15,7 @@ namespace DataAccessLayer.Repository
         T GetOneByID(long id);
         void Insert(T t);
         void Update(T t);
-        void Delente(T t);
+        void Delete(T t);
         void Commit();
         void AddRange(IEnumerable<T> t);
         void UpdateRange(IEnumerable<T> t);
