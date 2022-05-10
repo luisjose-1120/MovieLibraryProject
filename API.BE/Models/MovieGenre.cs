@@ -9,6 +9,7 @@ namespace API.BE.Models
 {
     public  class MovieGenre
     {
+        public long IdMovieGenre { get; set; }
         public long IdMovie { get; set; }
         public long IdGenre { get; set; }
 

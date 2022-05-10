@@ -139,14 +139,15 @@ namespace DataAccessLayer.EntityFramework
 
             modelBuilder.Entity<MovieActor>(entity =>
             {
-                entity.HasKey(e => new { e.IdMovie, e.IdActor })
-                    .HasName("MovieActor_CompositeKey");
+                entity.HasKey(e => e.IdMovieActor);
 
                 entity.ToTable("Movie_Actor");
 
-                entity.Property(e => e.IdMovie).HasColumnName("id_movie");
+                entity.Property(e => e.IdMovieActor).HasColumnName("id_movie_actor");
 
                 entity.Property(e => e.IdActor).HasColumnName("id_actor");
+
+                entity.Property(e => e.IdMovie).HasColumnName("id_movie");
 
                 entity.Property(e => e.MovieRole)
                     .IsRequired()
@@ -169,14 +170,15 @@ namespace DataAccessLayer.EntityFramework
 
             modelBuilder.Entity<MovieGenre>(entity =>
             {
-                entity.HasKey(e => new { e.IdMovie, e.IdGenre })
-                    .HasName("MovieGenre_CompositeKey");
+                entity.HasKey(e => e.IdMovieGenre);
 
                 entity.ToTable("Movie_Genre");
 
-                entity.Property(e => e.IdMovie).HasColumnName("id_movie");
+                entity.Property(e => e.IdMovieGenre).HasColumnName("id_movie_genre");
 
                 entity.Property(e => e.IdGenre).HasColumnName("id_genre");
+
+                entity.Property(e => e.IdMovie).HasColumnName("id_movie");
 
                 entity.HasOne(d => d.IdGenreNavigation)
                     .WithMany(p => p.MovieGenre)

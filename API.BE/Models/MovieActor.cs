@@ -9,6 +9,7 @@ namespace API.BE.Models
 {
     public  class MovieActor
     {
+        public long IdMovieActor { get; set; }
         public long IdMovie { get; set; }
         public long IdActor { get; set; }
         public string MovieRole { get; set; }
